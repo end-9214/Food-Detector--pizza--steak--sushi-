@@ -1,22 +1,22 @@
 """
-Contains functionality for creating PyTorch DataLoaders for image classification data.
+Contains functionality for creating PyTorch DataLoaders for 
+image classification data.
 """
 import os
 
 from torchvision import datasets, transforms
-
 from torch.utils.data import DataLoader
 
-NUM_WORKERS = os.cpu.count()
+NUM_WORKERS = os.cpu_count()
 
 def create_dataloaders(
-        train_dir : str,
-        test_dir : str,
-        transform : transforms.Compose,
-        batch_size : int,
-        num_workers : int=NUM_WORKERS
+    train_dir: str, 
+    test_dir: str, 
+    transform: transforms.Compose, 
+    batch_size: int, 
+    num_workers: int=NUM_WORKERS
 ):
-    """Creates training and testing DataLoaders.
+  """Creates training and testing DataLoaders.
 
   Takes in a training directory and testing directory path and turns
   them into PyTorch Datasets and then into PyTorch DataLoaders.
