@@ -189,4 +189,4 @@ def train(model: torch.nn.Module,
       results["test_acc"].append(test_acc)
 
     # Return the filled results at the end of the epochs
-    return results
+      return results

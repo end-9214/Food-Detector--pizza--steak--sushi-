@@ -33,15 +33,3 @@ def save_model(model: torch.nn.Module,
   print(f"[INFO] Saving model to: {model_save_path}")
   torch.save(obj=model.state_dict(),
              f=model_save_path)
-```
-
-Now if we wanted to use our `save_model()` function, instead of writing it all over again, we can import it and use it via:
-
-```python
-# Import utils.py
-from going_modular import utils
-
-# Save a model to file
-save_model(model=...
-           target_dir=...,
-           model_name=...)
